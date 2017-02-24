@@ -1,0 +1,74 @@
+<html>
+<body>
+  <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <title>Ejercicio 5.5.7</title>
+      <h1> calculadora binaria </h1>
+
+      <!-- Botones   -->
+    <div id=container>
+    <div id=display> </div>
+    <p></p>
+    <input type="button" name="uno" value = "1" onclick="num1()"></input>
+    <input type="button" name="cero" value = "0" onclick="num0()"></input>
+    <input type="button" name="suma" value = "+" onclick="suma()"></input>
+    <input type="button" name="resultado" value = "="onclick="resultado()"></input>
+    </div>
+
+
+     <script type="text/javascript" charset="utf-8">
+
+     var pantalla = document.getElementById("display");
+     var numx;
+     function num1() {
+        pantalla.innerHTML = 1;
+     }
+     
+     function num0(){
+        pantalla.innerHTML = 0;
+     }
+     
+     function suma()
+     {
+        numx = pantalla.innerHTML;
+        pantalla.innerHTML = "";
+     }
+
+     function resultado(){
+        var numy = pantalla.innerHTML;
+        if(numx == "0" && numy == "0"){
+            result = "0";
+        }else if (numx == "1" && numy == "1"){
+            result = "0";
+        }else if (numx == "1" && numy == "0"){
+            result = "1";
+        }else if (numx == "0" && numy == "1"){
+            result = "1";
+        }
+        pantalla.innerHTML = result;
+     }
+     </script>
+  </head>
+
+<!-- CSS -->
+
+<style type="text/css" media="screen">
+#container {
+    height: 100px;
+    background-color: #f6f8d8; 
+    border:  3px blue ridge;
+    text-align: center;
+    width: 370px;
+}
+
+#display{
+    width: 200px;
+    height: 20px;
+    margin-left: 85px;
+    margin-top: 10px;
+    border: 2px black solid;
+    text-align: right;
+    left: 0px;
+}
+</body>
+</html>
